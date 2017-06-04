@@ -1,9 +1,18 @@
 package com.cheer.taishan.entity;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Student implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3356889968216661129L;
+
+	public static DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 	
 	private String id;
 	private String name;
@@ -48,6 +57,15 @@ public class Student implements Serializable {
 		this.birthday = birthday;
 	}
 	
-	
+	public String toString(){
+		StringBuilder sb = new StringBuilder(1024);
+		sb.append(getId()).append("\t").
+			append(getName()).append("\t").
+			append(getSex()).append("\t").
+			append(df.format(getBirthday())).append("\t").
+			append(getHeight()).append("\t").
+			append(getWeight());
+		return sb.toString();
+	}
 	
 }
