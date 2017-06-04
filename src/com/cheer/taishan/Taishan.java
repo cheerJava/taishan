@@ -11,8 +11,14 @@ import com.cheer.taishan.define.Request;
 import com.cheer.taishan.define.Response;
 import com.cheer.taishan.entity.Student;
 import com.cheer.taishan.request.AddRequest;
+import com.cheer.taishan.request.ExitRequest;
+import com.cheer.taishan.request.ExportRequest;
+import com.cheer.taishan.request.ImportRequest;
 import com.cheer.taishan.request.ViewRequest;
 import com.cheer.taishan.response.AddResponse;
+import com.cheer.taishan.response.ExitResponse;
+import com.cheer.taishan.response.ExportResponse;
+import com.cheer.taishan.response.ImportResponse;
 import com.cheer.taishan.response.ViewResponse;
 
 public class Taishan {
@@ -76,9 +82,12 @@ public class Taishan {
 		commandMap.put("V", v);
 		Processor a = new Processor(new AddRequest(),new AddResponse());
 		commandMap.put("A", a);
-		Processor e = new Processor(null,null);
+		Processor e = new Processor(new ExitRequest(),new ExitResponse());
 		commandMap.put("E", e);
-		
+		Processor x = new Processor(new ExportRequest(),new ExportResponse());
+		commandMap.put("x", x);
+		Processor i = new Processor(new ImportRequest(),new ImportResponse());
+		commandMap.put("i", i);
 		
 	}
 
