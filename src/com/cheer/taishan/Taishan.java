@@ -4,7 +4,7 @@ public class Taishan {
 
 	public static void main(String[] args) {
 		System.out.println("------------------");
-		System.out.println("|»¶Ó­À´µ½Ì©É½ÏµÍ³£¡  |");
+		System.out.println("|æ¬¢è¿æ¥åˆ°æ³°å±±ç³»ç»Ÿï¼ |");
 		System.out.println("------------------");
 
 	}
